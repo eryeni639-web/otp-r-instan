@@ -43,7 +43,7 @@ MAIN_MENU = ReplyKeyboardMarkup(
     resize_keyboard=True,
     is_persistent=True
 )
-MAIN_MENU = ...
+MAIN_MENU =
 
 SELECT_SERVER = 1
 SELECT_COUNTRY = 2
