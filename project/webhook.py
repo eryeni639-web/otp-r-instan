@@ -62,7 +62,7 @@ if chat_id:
             "success": False
         }), 500
 
-if __name__ == "__main__":
+def start_webhook():
 
     app.run(
         host="0.0.0.0",
