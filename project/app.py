@@ -32,6 +32,8 @@ from status_checker import (
     wait_otp_server5
 )
 
+from utils.order_store import save_order
+
 MAIN_MENU = ReplyKeyboardMarkup(
     [
         ["💰 Saldo", "🌍 Negara"],
@@ -435,6 +437,11 @@ user_session[chat_id]["service"] = service_id
 
     order_id = result["data"]["order_id"]
 
+        
+save_order(
+    order_id,
+    chat_id
+)
     await update.message.reply_text(
         "⏳ Menunggu OTP..."
     )
