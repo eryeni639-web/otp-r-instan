@@ -4,7 +4,7 @@ from utils.helpers import (
     log_info,
     log_error
 )
-
+import os
 from telegram import Bot
 
 from config import BOT_TOKEN
@@ -66,5 +66,5 @@ def start_webhook():
 
     app.run(
         host="0.0.0.0",
-        port=5000
+        port=int(os.environ.get("PORT", 5000))
     )
