@@ -29,8 +29,7 @@ def api_get(endpoint, params=None):
     except Exception as e:
         log_error(str(e))
         return None
-
-  def api_post(endpoint, data=None):
+def api_post(endpoint, data=None):
     try:
         response = requests.post(
             f"{BASE_URL}/{endpoint}",
@@ -70,7 +69,6 @@ def get_history():
     log_info("Mengambil riwayat")
 
     return api_get("history.php")
-
 
 def cancel_order(order_id):
     """
