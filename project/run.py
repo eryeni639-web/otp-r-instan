@@ -5,14 +5,13 @@ import webhook
 
 
 def run_bot():
+
     app.main()
 
 
 def run_webhook():
-    webhook.app.run(
-        host="0.0.0.0",
-        port=5000
-    )
+
+    webhook.start_webhook()
 
 
 if __name__ == "__main__":
